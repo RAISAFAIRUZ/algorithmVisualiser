@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <h2>Algorithms</h2>
+            <ul>
+                <li>
+                    <h3>Sorting Algorithms</h3>
+                    <ul>
+                        <li><button onclick="loadAlgorithm('bubble_sort')">Bubble Sort</button></li>
+                        <li><button onclick="loadAlgorithm('quick_sort')">Quick Sort</button></li>
+                        <!-- Add more sorting algorithms here -->
+                    </ul>
+                </li>
+                <li>
+                    <h3>Graph Algorithms</h3>
+                    <ul>
+                        <li><button onclick="loadAlgorithm('bfs')">Breadth-First Search</button></li>
+                        <li><button onclick="loadAlgorithm('dfs')">Depth-First Search</button></li>
+                        <!-- Add more graph algorithms here -->
+                    </ul>
+                </li>
+                <li>
+                    <h3>Search Algorithms</h3>
+                    <ul>
+                        <li><button onclick="loadAlgorithm('binary_search')">Binary Search</button></li>
+                        <li><button onclick="loadAlgorithm('linear_search')">Linear Search</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="content">
+            <h1 id="algorithm-title">Algorithm Visualization</h1>
+            <p>Enter numbers separated by commas to visualize the algorithm:</p>
+            <input type="text" id="array-input" placeholder="e.g., 5,3,8,1,2">
+            <button id="visualize-btn" onclick="runVisualization()">Visualize</button>
+
+            <!-- Visualization Canvas -->
+            <canvas id="visualization-canvas" width="800" height="400"></canvas>
+        </main>
+    </div>
+    <script src="/static/js/visualiser.js"></script>
+</body>
+
+</html>
